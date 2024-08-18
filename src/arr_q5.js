@@ -16,7 +16,7 @@ function counts(nums) {
     while (i < left.length && j < right.length) {
       if (left[i].num <= right[j].num) {
         merged.push(left[i]);
-        result[left[i].index] += j; // Count how many elements have been merged from right
+        result[left[i].index] += j;
         i++;
       } else {
         merged.push(right[j]);
@@ -46,5 +46,7 @@ function counts(nums) {
   return result;
 }
 
-const nums = [5, 4, 1, 3];
+const nums = [5, 4, 1, 3]; // 3 2 0 0
+const arr = [9, 8, 7, 6]; // 3 2 1 0
 console.log(counts(nums));
+console.log(counts(arr));
